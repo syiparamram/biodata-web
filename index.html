@@ -2,37 +2,85 @@
 <html>
 <head>
 <title>Biodata Online</title>
+
 <style>
 body{
-font-family:Arial;
-background:#900000;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#2b0000,#900000);
+    margin:0;
+    padding:40px 0;
 }
+
 .container{
-background:white;
-padding:25px;
-border-radius:10px;
-width:350px;
+    background:white;
+    width:400px;
+    margin:auto;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
-input,textarea{
-width:100%;
-margin:8px 0;
-padding:7px;
+
+h2{
+    text-align:center;
+    color:#900000;
 }
+
+input, textarea{
+    width:100%;
+    margin:8px 0 15px;
+    padding:8px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
 button{
-width:100%;
-padding:8px;
-background:#900000;
-color:white;
-border:none;
+    width:100%;
+    padding:10px;
+    background:#900000;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#6b0000;
+}
+
+.hasil{
+    margin-top:20px;
+    padding:15px;
+    background:#f5f5f5;
+    border-left:5px solid #900000;
+    border-radius:8px;
+}
+
+.screenshot-section{
+    width:80%;
+    margin:60px auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.screenshot-section h3{
+    color:#900000;
+}
+
+.screenshot-section img{
+    width:100%;
+    margin:15px 0;
+    border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 </style>
+
 </head>
 <body>
 
+<!-- FORM SECTION -->
 <div class="container">
 <h2>Form Biodata</h2>
 
@@ -44,7 +92,28 @@ border:none;
 <button type="submit">Simpan</button>
 </form>
 
-<p id="hasil"></p>
+<div class="hasil" id="hasil"></div>
+</div>
+
+<!-- SCREENSHOT SECTION -->
+<div class="screenshot-section">
+
+<h3>Hasil Soal 1 - XAMPP</h3>
+<img src="XAMPPrunning.png">
+<img src="XAMPPfolder.png">
+<img src="code.png">
+<img src="code (2).png">
+<img src="code (3).png">
+<img src="code (4).png">
+<img src="code (5).png">
+<img src="XAMPPform.png">
+
+
+<h3>Hasil Soal 2 - Laragon</h3>
+<img src="laragon1.png">
+<img src="laragon2.png">
+<img src="laragon3.png">
+
 </div>
 
 <script>
@@ -57,6 +126,7 @@ var today=new Date();
 var umur=today.getFullYear()-tgl.getFullYear();
 
 document.getElementById("hasil").innerHTML=
+"<b>Hasil:</b><br><br>"+
 "Nama: "+nama+"<br>"+
 "Kelas: "+kelas+"<br>"+
 "Alamat: "+alamat+"<br>"+
@@ -66,21 +136,5 @@ return false;
 }
 </script>
 
-<hr>
-<h2>Hasil XAMPP</h2>
-<img src="XAMPPrunning.png" width="100%">
-<img src="XAMPPfolder.png" width="100%">
-<img src="code.png" width="100%">
-<img src="code (2).png" width="100%">
-<img src="code (3).png" width="100%">
-<img src="code (4).png" width="100%">
-<img src="code (5).png" width="100%">
-<img src="XAMPPform.png" width="100%">
-
-<hr>
-<h2>Hasil Laragon</h2>
-<img src="laragon1.png" width="100%">
-<img src="laragon2.png" width="100%">
-  
 </body>
 </html>
