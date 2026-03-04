@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Biodata Online</title>
+<title>Website Biodata</title>
 
 <style>
 body{
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#2b0000,#900000);
     margin:0;
-    padding:40px 0;
+    background:#f4f4f4;
 }
 
-.container{
-    background:white;
-    width:400px;
-    margin:auto;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-h2{
+/* NAVBAR */
+.navbar{
+    background:#900000;
+    color:white;
+    padding:15px;
     text-align:center;
-    color:#900000;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
+/* SECTION UMUM */
+.section{
+    width:85%;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+.section h2{
+    color:#900000;
+    margin-top:0;
+}
+
+/* FORM */
 input, textarea{
     width:100%;
-    margin:8px 0 15px;
     padding:8px;
+    margin:8px 0 15px;
     border-radius:6px;
     border:1px solid #ccc;
 }
@@ -56,33 +67,34 @@ button:hover{
     border-radius:8px;
 }
 
-.screenshot-section{
-    width:80%;
-    margin:60px auto;
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+/* SUBSECTION TUGAS */
+.subsection{
+    margin-top:30px;
+    padding:20px;
+    border-top:3px solid #900000;
 }
 
-.screenshot-section h3{
+.subsection h3{
     color:#900000;
 }
 
-.screenshot-section img{
+.subsection img{
     width:100%;
     margin:15px 0;
     border-radius:8px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 </style>
-
 </head>
 <body>
 
-<!-- FORM SECTION -->
-<div class="container">
-<h2>Form Biodata</h2>
+<div class="navbar">
+WEBSITE BIODATA - SYIFA RAMADHANI
+</div>
+
+<!-- SECTION FORM -->
+<div class="section">
+<h2>Section 1 - Form Biodata</h2>
 
 <form onsubmit="return hitung()">
 <input type="text" id="nama" placeholder="Nama Lengkap" required>
@@ -95,10 +107,13 @@ button:hover{
 <div class="hasil" id="hasil"></div>
 </div>
 
-<!-- SCREENSHOT SECTION -->
-<div class="screenshot-section">
+<!-- SECTION TUGAS -->
+<div class="section">
+<h2>Section 2 - Hasil Tugas</h2>
 
-<h3>Hasil Soal 1 - XAMPP</h3>
+<!-- XAMPP -->
+<div class="subsection">
+<h3>Soal 1 - XAMPP</h3>
 <img src="XAMPPrunning.png">
 <img src="XAMPPfolder.png">
 <img src="code.png">
@@ -107,12 +122,15 @@ button:hover{
 <img src="code (4).png">
 <img src="code (5).png">
 <img src="XAMPPform.png">
+</div>
 
-
-<h3>Hasil Soal 2 - Laragon</h3>
+<!-- LARAGON -->
+<div class="subsection">
+<h3>Soal 2 - Laragon</h3>
 <img src="laragon1.png">
 <img src="laragon2.png">
 <img src="laragon3.png">
+</div>
 
 </div>
 
