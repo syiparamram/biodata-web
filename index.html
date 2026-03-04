@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Biodata Online</title>
+<style>
+body{
+font-family:Arial;
+background:#900000;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+.container{
+background:white;
+padding:25px;
+border-radius:10px;
+width:350px;
+}
+input,textarea{
+width:100%;
+margin:8px 0;
+padding:7px;
+}
+button{
+width:100%;
+padding:8px;
+background:#900000;
+color:white;
+border:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Form Biodata</h2>
+
+<form onsubmit="return hitung()">
+<input type="text" id="nama" placeholder="Nama Lengkap" required>
+<input type="text" id="kelas" placeholder="Kelas" required>
+<textarea id="alamat" placeholder="Alamat" required></textarea>
+<input type="date" id="tgl" required>
+<button type="submit">Simpan</button>
+</form>
+
+<p id="hasil"></p>
+</div>
+
+<script>
+function hitung(){
+var nama=document.getElementById("nama").value;
+var kelas=document.getElementById("kelas").value;
+var alamat=document.getElementById("alamat").value;
+var tgl=new Date(document.getElementById("tgl").value);
+var today=new Date();
+var umur=today.getFullYear()-tgl.getFullYear();
+
+document.getElementById("hasil").innerHTML=
+"Nama: "+nama+"<br>"+
+"Kelas: "+kelas+"<br>"+
+"Alamat: "+alamat+"<br>"+
+"Umur: "+umur+" tahun";
+
+return false;
+}
+</script>
+
+</body>
+</html>
