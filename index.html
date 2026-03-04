@@ -1,158 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Website Biodata</title>
-
+<title>PTS WEB</title>
 <style>
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f4f4;
-}
-
-/* NAVBAR */
-.navbar{
+    font-family:Arial;
     background:#900000;
     color:white;
-    padding:15px;
     text-align:center;
-    font-weight:bold;
-    letter-spacing:2px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
-
-/* SECTION UMUM */
-.section{
-    width:85%;
-    margin:50px auto;
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.1);
-}
-
-.section h2{
-    color:#900000;
-    margin-top:0;
-}
-
-/* FORM */
-input, textarea{
-    width:100%;
-    padding:8px;
-    margin:8px 0 15px;
-    border-radius:6px;
-    border:1px solid #ccc;
-}
-
+h1{margin-bottom:40px;}
 button{
-    width:100%;
-    padding:10px;
-    background:#900000;
-    color:white;
+    width:220px;
+    padding:12px;
+    margin:10px;
     border:none;
     border-radius:6px;
     font-weight:bold;
     cursor:pointer;
 }
-
-button:hover{
-    background:#6b0000;
-}
-
-.hasil{
-    margin-top:20px;
-    padding:15px;
-    background:#f5f5f5;
-    border-left:5px solid #900000;
-    border-radius:8px;
-}
-
-/* SUBSECTION TUGAS */
-.subsection{
-    margin-top:30px;
-    padding:20px;
-    border-top:3px solid #900000;
-}
-
-.subsection h3{
-    color:#900000;
-}
-
-.subsection img{
-    width:100%;
-    margin:15px 0;
-    border-radius:8px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
+.btn1{background:white;color:#900000;}
+.btn2{background:#f2f2f2;color:#900000;}
+button:hover{opacity:0.8;}
 </style>
 </head>
 <body>
 
-<div class="navbar">
-WEBSITE BIODATA - SYIFA RAMADHANI
-</div>
+<h1>PTS WEB<br>Syifa Ramadani<br>XI TKJ 3</h1>
 
-<!-- SECTION FORM -->
-<div class="section">
-<h2>Section 1 - Form Biodata</h2>
-
-<form onsubmit="return hitung()">
-<input type="text" id="nama" placeholder="Nama Lengkap" required>
-<input type="text" id="kelas" placeholder="Kelas" required>
-<textarea id="alamat" placeholder="Alamat" required></textarea>
-<input type="date" id="tgl" required>
-<button type="submit">Simpan</button>
-</form>
-
-<div class="hasil" id="hasil"></div>
-</div>
-
-<!-- SECTION TUGAS -->
-<div class="section">
-<h2>Section 2 - Hasil Tugas</h2>
-
-<!-- XAMPP -->
-<div class="subsection">
-<h3>Soal 1 - XAMPP</h3>
-<img src="XAMPPrunning.png">
-<img src="XAMPPfolder.png">
-<img src="code.png">
-<img src="code (2).png">
-<img src="code (3).png">
-<img src="code (4).png">
-<img src="code (5).png">
-<img src="XAMPPform.png">
-</div>
-
-<!-- LARAGON -->
-<div class="subsection">
-<h3>Soal 2 - Laragon</h3>
-<img src="laragon1.png">
-<img src="laragon2.png">
-<img src="laragon3.png">
-</div>
-
-</div>
-
-<script>
-function hitung(){
-var nama=document.getElementById("nama").value;
-var kelas=document.getElementById("kelas").value;
-var alamat=document.getElementById("alamat").value;
-var tgl=new Date(document.getElementById("tgl").value);
-var today=new Date();
-var umur=today.getFullYear()-tgl.getFullYear();
-
-document.getElementById("hasil").innerHTML=
-"<b>Hasil:</b><br><br>"+
-"Nama: "+nama+"<br>"+
-"Kelas: "+kelas+"<br>"+
-"Alamat: "+alamat+"<br>"+
-"Umur: "+umur+" tahun";
-
-return false;
-}
-</script>
+<a href="form.html"><button class="btn1">Isi Form Biodata</button></a>
+<a href="tugas.html"><button class="btn2">Lihat Tugas</button></a>
 
 </body>
 </html>
