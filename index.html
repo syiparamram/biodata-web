@@ -2,9 +2,13 @@
 <html>
 <head>
 <title>PTS WEB</title>
+
+<!-- Import Font Sacramento -->
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
 <style>
 body{
-    font-family:Arial;
+    font-family: Arial, sans-serif;
     background:#900000;
     color:white;
     text-align:center;
@@ -13,28 +17,56 @@ body{
     justify-content:center;
     align-items:center;
     height:100vh;
+    margin:0;
 }
-h1{margin-bottom:40px;}
+
+h1{
+    margin-bottom:30px;
+    line-height:1.4;
+}
+
+.nama{
+    font-family: 'Sacramento', cursive;
+    font-size:55px;
+    margin-top:10px;
+}
+
 button{
     width:220px;
     padding:12px;
-    margin:10px;
+    margin:12px;
     border:none;
-    border-radius:6px;
+    border-radius:8px;
     font-weight:bold;
     cursor:pointer;
+    background:white;
+    color:#900000;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
 }
-.btn1{background:white;color:#900000;}
-.btn2{background:#f2f2f2;color:#900000;}
-button:hover{opacity:0.8;}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.4);
+}
 </style>
 </head>
+
 <body>
 
-<h1>PTS WEB<br>Syifa Ramadani<br>XI TKJ 3</h1>
+<h1>
+PTS WEB<br>
+<span class="nama">Syifa Ramadani</span><br>
+XI TKJ 3
+</h1>
 
-<a href="form.html"><button class="btn1">Isi Form Biodata</button></a>
-<a href="tugas.html"><button class="btn2">Lihat Tugas</button></a>
+<a href="form.html">
+<button>Isi Form Biodata</button>
+</a>
+
+<a href="tugas.html">
+<button>Lihat Tugas</button>
+</a>
 
 </body>
 </html>
